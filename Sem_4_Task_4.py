@@ -8,7 +8,7 @@ if (img_1_name.count('.bmp') == 0 or
     result_name.count('.bmp') == 0):
     
     print('Error: wrong format.\n')
-    raise SystemExit(-1)
+    return
 
 img_1 = open(img_1_name, 'rb')
 img_2 = open(img_2_name, 'rb')
@@ -116,7 +116,7 @@ pixels_2 = read_pixels(img_2, header_2)
 
 if (height_1 != height_2):
     print('Error: incorrect image shapes.\n')
-    raise SystemExit(-1)
+    return
 
 res_pixels = []
 padding_stride = None
